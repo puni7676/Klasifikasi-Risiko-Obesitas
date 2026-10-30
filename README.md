@@ -1,13 +1,14 @@
-# Obesity Prediction: Klasifikasi Tingkat Risiko Obesitas Berdasarkan Kebiasaan Makan dan Aktivitas Fisik
+# Klasifikasi Tingkat Risiko Obesitas Berdasarkan Kebiasaan Makan dan Aktivitas Fisik
 
-## 1. Ringkasan Proyek
+## Ringkasan Proyek
 
-Proyek ini merupakan proyek Data Science yang bertujuan untuk menganalisis pola kebiasaan hidup dan karakteristik individu berdasarkan kategori status obesitas serta membangun model Machine Learning untuk mengklasifikasikan status obesitas.
+Proyek ini bertujuan untuk mengklasifikasikan tingkat risiko obesitas berdasarkan kebiasaan makan, aktivitas fisik, dan karakteristik individu menggunakan pendekatan Data Science dan Machine Learning.
 
-Dataset yang digunakan berisi informasi mengenai karakteristik individu dan kebiasaan hidup, seperti jenis kelamin, usia, riwayat keluarga dengan kelebihan berat badan, kebiasaan konsumsi makanan tinggi kalori, konsumsi sayuran, aktivitas fisik, konsumsi air, dan kebiasaan lainnya.
+Data yang digunakan mencakup berbagai variabel, seperti usia, jenis kelamin, riwayat keluarga, kebiasaan mengonsumsi makanan tinggi kalori, frekuensi konsumsi sayuran, jumlah makan utama, kebiasaan mengonsumsi makanan ringan, konsumsi air, serta frekuensi aktivitas fisik.
 
-Proyek ini menggunakan pendekatan klasifikasi dengan tujuh kategori status obesitas, yaitu:
+Melalui proses analisis data dan pemodelan Machine Learning, proyek ini berupaya mengidentifikasi pola kebiasaan hidup yang berkaitan dengan kategori status berat badan dan obesitas.
 
+Klasifikasi dilakukan ke dalam tujuh kategori, yaitu:
 1. Insufficient Weight
 2. Normal Weight
 3. Overweight Level I
@@ -16,11 +17,11 @@ Proyek ini menggunakan pendekatan klasifikasi dengan tujuh kategori status obesi
 6. Obesity Type II
 7. Obesity Type III
 
-Tahapan pengerjaan proyek meliputi Business Understanding, Data Understanding, Data Preparation, Exploratory Data Analysis (EDA), Modeling, Evaluation, dan Conclusion.
+Tahapan proyek meliputi Business Understanding, Data Understanding, Data Preparation, Exploratory Data Analysis (EDA), Modeling, Evaluation, dan Conclusion.
 
-Hasil proyek diharapkan dapat memberikan gambaran mengenai hubungan antara kebiasaan hidup dan kategori status obesitas serta menghasilkan model klasifikasi berdasarkan karakteristik dan kebiasaan hidup individu.
+Hasil proyek diharapkan dapat memberikan gambaran mengenai pola kebiasaan makan dan aktivitas fisik pada berbagai kategori status obesitas serta menunjukkan kemampuan Machine Learning dalam melakukan klasifikasi berdasarkan variabel yang tersedia.
 
-**Catatan:** Model ini merupakan hasil analisis data dan bukan alat diagnosis medis.
+**Catatan:** Hasil klasifikasi merupakan analisis berbasis dataset dan bukan diagnosis atau penilaian risiko medis secara langsung.
 
 ## 2. Informasi Anggota Kelompok
 
