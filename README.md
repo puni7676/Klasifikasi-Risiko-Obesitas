@@ -28,8 +28,6 @@ Hasil proyek diharapkan dapat memberikan gambaran mengenai hubungan antara kebia
 2. **Nama Kelompok:** kaum deadline
 3. **Nama Seluruh Anggota Kelompok:**
 
-Proyek ini dikerjakan oleh kelompok dengan anggota sebagai berikut:
-
 | No. | Nama | NIM | Kontribusi |
 |---|---|---|---|
 | 1 | Hasan | 123240041 | [Isi kontribusi anggota] |
