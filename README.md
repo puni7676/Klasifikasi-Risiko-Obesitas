@@ -88,16 +88,12 @@ ObesityPrediction/
 │
 ├── README.md
 │
-├── requirements.txt
-│
 ├── data/
 │   └── Obesity_prediction.csv
 │
-├── notebooks/
-│   └── UTS_DataScience_ObesityPrediction_ProyekAkhir.ipynb
-│
-└── laporan/
-    └── Laporan_UTS_Acuan.pdf
+└── notebooks/
+    └── DataScience_ObesityPrediction_ProyekAkhir.ipynb
+
 ```
 
 Keterangan:
