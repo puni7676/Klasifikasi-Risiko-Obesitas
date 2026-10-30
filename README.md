@@ -21,10 +21,10 @@ Proyek ini bersifat akademik. Hasil klasifikasi **bukan alat diagnosis medis**, 
 
 | No. | Nama | NIM | Kontribusi |
 |---|---|---|---|
-| 1 | Hasan | 123240041 | *Isi kontribusi aktual anggota*  |
-| 2 | Nurjelita Sukmawati | 123240046 | *Isi kontribusi aktual anggota*  |
-| 3 | Haerunisa | 123240047 | *Isi kontribusi aktual anggota*  |
-| 4 | Puput Septiani | 123240263 | *Isi kontribusi aktual anggota*  |
+| 1 | Hasan | 123240041 | *Isi kontribusi anggota*  |
+| 2 | Nurjelita Sukmawati | 123240046 | *Isi kontribusi anggota*  |
+| 3 | Haerunisa | 123240047 | *Isi kontribusi anggota*  |
+| 4 | Puput Septiani | 123240263 | *Isi kontribusi anggota*  |
 
 ## 3. Sumber Data
 
