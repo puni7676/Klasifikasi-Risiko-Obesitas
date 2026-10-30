@@ -1,6 +1,8 @@
 # analisis-pola-obesitas
-Analisis pola kebiasaan hidup dan karakteristik individu pada berbagai kategori status obesitas menggunakan Python.
+Analisis Pola Kebiasaan Hidup dan Karakteristik Individu pada Berbagai Kategori Status Obesitas
 
+# Proyek Akhir Praktikum Data Science — Informatika UPN “Veteran” Yogyakarta
+Notebook ini mengikuti alur CRISP-DM: **Business Understanding → Data Gathering/Data Understanding → EDA → Cleaning & Preprocessing → Modelling → Evaluation → Conclusion**
 
 # FORMAT KETERANGAN
 
