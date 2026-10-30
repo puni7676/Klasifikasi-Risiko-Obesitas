@@ -15,8 +15,6 @@ Proyek ini bersifat akademik. Hasil klasifikasi **bukan alat diagnosis medis**, 
 
 ## 2. Informasi Anggota dan Kontribusi
 
-## Informasi Kelompok
-
 1. **Nomor Kelompok:** 55
 2. **Nama Kelompok:** kaum deadline
 3. **Nama Seluruh Anggota Kelompok:**
@@ -32,8 +30,6 @@ Proyek ini bersifat akademik. Hasil klasifikasi **bukan alat diagnosis medis**, 
 
 Dataset yang digunakan adalah **Estimation of Obesity Levels Based on Eating Habits and Physical Condition**.
 
-- **Sumber resmi:** UCI Machine Learning Repository  
-  https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition
 - **Tautan dataset yang dicantumkan dalam laporan kelompok:** Kaggle – Obesity Prediction  
   https://www.kaggle.com/datasets/ruchikakumbhar/obesityprediction
 - **File lokal:** `data/Obesity_prediction.csv`
@@ -64,79 +60,7 @@ Dataset berisi informasi responden dari Meksiko, Peru, dan Kolombia. Berdasarkan
 | `MTRANS` | Moda transportasi |
 | `Obesity` | Label kategori status berat badan (target) |
 
-## 4. Struktur Repository
-
-```text
-ObesityPrediction_Repository/
-├── README.md
-├── requirements.txt
-├── Laporan_UTS_Acuan.pdf
-├── data/
-│   └── Obesity_prediction.csv
-└── notebooks/
-    └── UTS_DataScience_ObesityPrediction_ProyekAkhir.ipynb
-```
-
-## 5. Panduan Menjalankan Proyek
-
-### A. Menggunakan Google Colab
-
-1. Buka https://colab.research.google.com/.
-2. Upload notebook dari folder `notebooks/`.
-3. Upload `Obesity_prediction.csv` dari folder `data/` ke sesi Colab, atau hubungkan Google Drive.
-4. Sesuaikan lokasi file CSV pada sel pembacaan dataset (`file_path` atau `DATA_PATH`).
-5. Instal dependensi jika diperlukan:
-
-   ```python
-   !pip install pandas numpy matplotlib seaborn scikit-learn scipy
-   ```
-
-6. Jalankan semua sel notebook secara berurutan dari awal sampai akhir.
-7. Periksa output, tabel, grafik, dan interpretasinya. Lengkapi bagian konklusi berdasarkan hasil aktual.
-
-### B. Menjalankan secara lokal
-
-1. Pastikan Python 3.10 atau versi kompatibel telah terpasang.
-2. Clone repository:
-
-   ```bash
-   git clone <URL_REPOSITORY_GITHUB>
-   cd ObesityPrediction_Repository
-   ```
-
-3. Buat virtual environment (opsional):
-
-   ```bash
-   python -m venv .venv
-   ```
-
-   Windows:
-
-   ```bash
-   .venv\Scripts\activate
-   ```
-
-   macOS/Linux:
-
-   ```bash
-   source .venv/bin/activate
-   ```
-
-4. Instal pustaka:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. Jalankan Jupyter Notebook:
-
-   ```bash
-   jupyter notebook
-   ```
-
-6. Buka notebook pada folder `notebooks/`, lalu jalankan semua sel secara berurutan.
-
-## 6. Alur Analisis dalam Notebook
+## 4. Alur Analisis dalam Notebook
 
 Notebook mengikuti tahapan proyek Data Science berikut:
 
@@ -148,7 +72,7 @@ Notebook mengikuti tahapan proyek Data Science berikut:
 6. **Evaluasi** — evaluasi menggunakan metrik klasifikasi dan visualisasi pendukung.
 7. **Konklusi** — jawaban atas pertanyaan Business Understanding, interpretasi hasil, keputusan, dan keterbatasan.
 
-## 7. Catatan Interpretasi dan Etika
+## 5. Catatan Interpretasi dan Etika
 
 - `Height` dan `Weight` dapat digunakan untuk eksplorasi deskriptif, tetapi tidak digunakan sebagai fitur prediksi apabila label target diturunkan dari IMT. Penggunaan keduanya dapat menyebabkan *target leakage*.
 - Data sintetis dan duplikasi dapat memengaruhi evaluasi model. Pemisahan data dan validasi harus dilakukan dengan hati-hati.
@@ -157,7 +81,7 @@ Notebook mengikuti tahapan proyek Data Science berikut:
 - Korelasi dan feature importance tidak boleh ditafsirkan sebagai bukti sebab-akibat.
 - Hasil model tidak dimaksudkan untuk diagnosis atau keputusan medis individual.
 
-## 8. Lisensi dan Atribusi
+## 6. Lisensi dan Atribusi
 
 Dataset dirujuk melalui UCI Machine Learning Repository dan tautan Kaggle yang dicantumkan dalam laporan kelompok. Periksa kembali ketentuan lisensi dan atribusi pada halaman sumber resmi sebelum penggunaan atau distribusi ulang dataset. Cantumkan atribusi dataset dalam laporan akademik.
 
