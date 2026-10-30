@@ -1,139 +1,268 @@
-# Analisis Pola Kebiasaan Hidup dan Karakteristik Individu pada Berbagai Kategori Status Obesitas
+# Obesity Prediction: Analisis Pola Kebiasaan Hidup dan Karakteristik Individu pada Berbagai Kategori Status Obesitas
 
 ## 1. Ringkasan Proyek
 
-Proyek ini menerapkan tahapan Data Science untuk menganalisis pola kebiasaan hidup dan karakteristik individu pada berbagai kategori status obesitas. Dataset memuat informasi demografis, kebiasaan makan, konsumsi air, aktivitas fisik, penggunaan perangkat teknologi, moda transportasi, serta label kategori status obesitas.
+Proyek ini merupakan proyek Data Science yang bertujuan untuk menganalisis pola kebiasaan hidup dan karakteristik individu berdasarkan kategori status obesitas serta membangun model Machine Learning untuk mengklasifikasikan status obesitas.
 
-Tujuan proyek:
-- Memahami karakteristik dan kualitas dataset.
-- Melakukan Exploratory Data Analysis (EDA) untuk menemukan pola dan insight.
-- Membersihkan serta mempersiapkan data untuk pemodelan.
-- Membangun dan membandingkan model klasifikasi untuk tujuh kategori pada kolom target `Obesity`.
-- Mengevaluasi performa model dan menginterpretasikan hasil secara kritis.
+Dataset yang digunakan berisi informasi mengenai karakteristik individu dan kebiasaan hidup, seperti jenis kelamin, usia, riwayat keluarga dengan kelebihan berat badan, kebiasaan konsumsi makanan tinggi kalori, konsumsi sayuran, aktivitas fisik, konsumsi air, dan kebiasaan lainnya.
 
-Proyek ini bersifat akademik. Hasil klasifikasi **bukan alat diagnosis medis**, tidak membuktikan hubungan sebab-akibat, dan bukan pengganti pemeriksaan tenaga kesehatan.
+Proyek ini menggunakan pendekatan klasifikasi dengan tujuh kategori status obesitas, yaitu:
 
-## 2. Informasi Anggota dan Kontribusi
+1. Insufficient Weight
+2. Normal Weight
+3. Overweight Level I
+4. Overweight Level II
+5. Obesity Type I
+6. Obesity Type II
+7. Obesity Type III
+
+Tahapan pengerjaan proyek meliputi Business Understanding, Data Understanding, Data Preparation, Exploratory Data Analysis (EDA), Modeling, Evaluation, dan Conclusion.
+
+Hasil proyek diharapkan dapat memberikan gambaran mengenai hubungan antara kebiasaan hidup dan kategori status obesitas serta menghasilkan model klasifikasi berdasarkan karakteristik dan kebiasaan hidup individu.
+
+**Catatan:** Model ini merupakan hasil analisis data dan bukan alat diagnosis medis.
+
+## 2. Informasi Anggota Kelompok
 
 1. **Nomor Kelompok:** 55
 2. **Nama Kelompok:** kaum deadline
 3. **Nama Seluruh Anggota Kelompok:**
 
+Proyek ini dikerjakan oleh kelompok dengan anggota sebagai berikut:
+
 | No. | Nama | NIM | Kontribusi |
 |---|---|---|---|
-| 1 | Hasan | 123240041 | *Isi kontribusi anggota*  |
-| 2 | Nurjelita Sukmawati | 123240046 | *Isi kontribusi anggota*  |
-| 3 | Haerunisa | 123240047 | *Isi kontribusi anggota*  |
-| 4 | Puput Septiani | 123240263 | *Isi kontribusi anggota*  |
+| 1 | Hasan | 123240041 | [Isi kontribusi anggota] |
+| 2 | Nurjelita Sukmawati | 123240046 | [Isi kontribusi anggota] |
+| 3 | Haerunisa | 123240047 | [Isi kontribusi anggota] |
+| 4 | Puput Septiani | 123240263 | [Isi kontribusi anggota] |
+
+**Catatan:** Bagian kontribusi perlu disesuaikan dengan pembagian tugas dan pekerjaan yang benar-benar dilakukan oleh masing-masing anggota.
 
 ## 3. Sumber Data
 
-Dataset yang digunakan adalah **Estimation of Obesity Levels Based on Eating Habits and Physical Condition**.
+Dataset yang digunakan dalam proyek ini adalah **Estimation of Obesity Levels Based on Eating Habits and Physical Condition**.
 
-- **Tautan dataset yang dicantumkan dalam laporan kelompok:** Kaggle – Obesity Prediction  
-  https://www.kaggle.com/datasets/ruchikakumbhar/obesity-prediction
-- **File lokal:** `data/Obesity_prediction.csv`
-- **Ukuran dataset:** 2.111 baris dan 17 kolom (16 fitur dan 1 target), sesuai dokumentasi dataset/laporan kelompok.
-- **Target klasifikasi:** `Obesity`, yang berisi tujuh kategori status berat badan.
+Dataset diperoleh dari UCI Machine Learning Repository dan menggunakan salinan dataset yang tersedia di Kaggle sebagai referensi.
 
-Dataset berisi informasi responden dari Meksiko, Peru, dan Kolombia. Berdasarkan laporan acuan kelompok, dataset juga mencakup data sintetis yang dibentuk menggunakan SMOTE. Karena itu, interpretasi perlu mempertimbangkan keterbatasan representativitas dan potensi bias data sintetis.
+- Sumber resmi UCI: https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition
+- Sumber Kaggle: https://www.kaggle.com/datasets/ruchikakumbhar/obesity-prediction
 
-### Data Dictionary Ringkas
+### Informasi Dataset
 
-| Kolom | Keterangan |
+- Jumlah data: 2.111 baris.
+- Jumlah kolom: 17 kolom.
+- Jumlah fitur: 16 fitur.
+- Variabel target: Obesity.
+- Jenis permasalahan: Multiclass Classification.
+- Jumlah kategori target: 7 kelas.
+
+### Fitur Dataset
+
+Beberapa variabel yang digunakan dalam dataset antara lain:
+
+| Variabel | Keterangan |
 |---|---|
-| `Gender` | Jenis kelamin |
-| `Age` | Usia (tahun) |
-| `Height` | Tinggi badan (meter) |
-| `Weight` | Berat badan (kg) |
-| `family_history` | Riwayat keluarga dengan overweight |
-| `FAVC` | Kebiasaan mengonsumsi makanan tinggi kalori |
-| `FCVC` | Frekuensi konsumsi sayur |
-| `NCP` | Jumlah makan utama per hari |
-| `CAEC` | Kebiasaan mengonsumsi camilan di antara waktu makan |
-| `SMOKE` | Kebiasaan merokok |
-| `CH2O` | Tingkat konsumsi air |
-| `SCC` | Kebiasaan memantau asupan kalori |
-| `FAF` | Frekuensi aktivitas fisik |
-| `TUE` | Waktu penggunaan perangkat teknologi |
-| `CALC` | Frekuensi konsumsi alkohol |
-| `MTRANS` | Moda transportasi |
-| `Obesity` | Label kategori status berat badan (target) |
+| Gender | Jenis kelamin individu |
+| Age | Usia individu |
+| Height | Tinggi badan |
+| Weight | Berat badan |
+| family_history | Riwayat keluarga dengan kelebihan berat badan |
+| FAVC | Kebiasaan mengonsumsi makanan tinggi kalori |
+| FCVC | Frekuensi konsumsi sayuran |
+| NCP | Jumlah makanan utama per hari |
+| CAEC | Kebiasaan mengonsumsi makanan di antara waktu makan |
+| SMOKE | Kebiasaan merokok |
+| CH2O | Tingkat konsumsi air |
+| SCC | Kebiasaan memantau konsumsi kalori |
+| FAF | Frekuensi aktivitas fisik |
+| TUE | Waktu penggunaan perangkat teknologi |
+| CALC | Frekuensi konsumsi alkohol |
+| MTRANS | Moda transportasi yang digunakan |
+| Obesity | Kategori status obesitas sebagai variabel target |
 
-## 4. Panduan Menjalankan Proyek
+## 4. Struktur Repository
 
-### A. Menggunakan Google Colab
+Struktur folder proyek disusun sebagai berikut:
 
-1. Buka https://colab.research.google.com/.
-2. Upload notebook dari folder `notebooks/`.
-3. Upload `Obesity_prediction.csv` dari folder `data/` ke sesi Colab, atau hubungkan Google Drive.
-4. Sesuaikan lokasi file CSV pada sel pembacaan dataset (`file_path` atau `DATA_PATH`).
-5. Instal dependensi jika diperlukan:
+```text
+ObesityPrediction/
+│
+├── README.md
+│
+├── requirements.txt
+│
+├── data/
+│   └── Obesity_prediction.csv
+│
+├── notebooks/
+│   └── UTS_DataScience_ObesityPrediction_ProyekAkhir.ipynb
+│
+└── laporan/
+    └── Laporan_UTS_Acuan.pdf
+```
 
-   ```python
-   !pip install pandas numpy matplotlib seaborn scikit-learn scipy
-   ```
+Keterangan:
 
-6. Jalankan semua sel notebook secara berurutan dari awal sampai akhir.
-7. Periksa output, tabel, grafik, dan interpretasinya. Lengkapi bagian konklusi berdasarkan hasil aktual.
+- `README.md`: Dokumentasi dan panduan proyek.
+- `requirements.txt`: Daftar library Python yang dibutuhkan.
+- `data/`: Folder penyimpanan dataset.
+- `notebooks/`: Folder notebook yang berisi proses analisis dan pemodelan.
+- `laporan/`: Folder dokumen laporan proyek.
 
-### B. Menjalankan secara lokal
+## 5. Panduan Menjalankan Proyek
 
-1. Pastikan Python 3.10 atau versi kompatibel telah terpasang.
-2. Clone repository:
+Proyek ini dijalankan menggunakan Visual Studio Code (VS Code), Python, dan Jupyter Notebook.
 
-   ```bash
-   git clone <URL_REPOSITORY_GITHUB>
-   cd ObesityPrediction_Repository
-   ```
+### A. Persiapan
 
-3. Buat virtual environment (opsional):
+Pastikan aplikasi berikut sudah terinstal:
 
-   ```bash
-   python -m venv .venv
-   ```
+1. Python 3: https://www.python.org/downloads/
+2. Visual Studio Code: https://code.visualstudio.com/
+3. Git: https://git-scm.com/downloads/
 
-   Windows:
+Pada saat instalasi Python di Windows, pastikan opsi **Add Python to PATH** dicentang.
 
-   ```bash
-   .venv\Scripts\activate
-   ```
+### B. Membuka Repository
 
-   macOS/Linux:
+1. Unduh atau clone repository proyek dari GitHub.
+2. Ekstrak folder proyek jika menggunakan file ZIP.
+3. Buka Visual Studio Code.
+4. Pilih menu **File → Open Folder**.
+5. Pilih folder utama proyek.
 
-   ```bash
-   source .venv/bin/activate
-   ```
+### C. Membuat Virtual Environment
 
-4. Instal pustaka:
+Buka terminal di VS Code melalui menu **Terminal → New Terminal**.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+Jalankan perintah:
 
-5. Jalankan Jupyter Notebook:
+```bash
+python -m venv .venv
+```
 
-   ```bash
-   jupyter notebook
-   ```
+Aktifkan virtual environment pada Windows PowerShell:
 
-6. Buka notebook pada folder `notebooks/`, lalu jalankan semua sel secara berurutan.
+```powershell
+.venv\Scripts\Activate.ps1
+```
 
-## 5. Alur Analisis dalam Notebook
+Jika menggunakan Command Prompt:
 
-Notebook mengikuti tahapan proyek Data Science berikut:
+```cmd
+.venv\Scripts\activate.bat
+```
 
-1. **Business Understanding** — latar belakang, permasalahan, pertanyaan analisis, tujuan, metode, metrik keberhasilan, dan batasan.
-2. **Data Gathering** — pemuatan dataset, sumber data, dan pemahaman variabel.
-3. **EDA** — statistik deskriptif, visualisasi distribusi, hubungan fitur, dan interpretasi temuan.
-4. **Cleaning dan Preprocessing** — pemeriksaan kualitas data, penanganan duplikasi/missing value bila ditemukan, transformasi data, dan feature selection.
-5. **Modelling** — pelatihan dan perbandingan model klasifikasi.
-6. **Evaluasi** — evaluasi menggunakan metrik klasifikasi dan visualisasi pendukung.
-7. **Konklusi** — jawaban atas pertanyaan Business Understanding, interpretasi hasil, keputusan, dan keterbatasan.
+### D. Menginstal Library
+
+Setelah virtual environment aktif, jalankan:
+
+```bash
+python -m pip install --upgrade pip
+```
+
+Kemudian instal seluruh library yang dibutuhkan:
+
+```bash
+pip install -r requirements.txt
+```
+
+### E. Memasang Extension VS Code
+
+Buka menu Extensions di VS Code, kemudian instal:
+
+- Python (Microsoft)
+- Jupyter (Microsoft)
+
+Extension tersebut digunakan untuk menjalankan notebook Python secara langsung di VS Code.
+
+### F. Membuka dan Menjalankan Notebook
+
+1. Buka folder `notebooks`.
+2. Pilih file `UTS_DataScience_ObesityPrediction_ProyekAkhir.ipynb`.
+3. Klik **Select Kernel** pada bagian kanan atas notebook.
+4. Pilih interpreter Python dari virtual environment `.venv`.
+5. Jalankan setiap cell secara berurutan atau pilih **Run All**.
+6. Tunggu hingga seluruh proses analisis dan pemodelan selesai.
+
+### G. Memastikan Dataset Terbaca
+
+Pastikan file dataset berada pada folder `data` dengan nama:
+
+```text
+Obesity_prediction.csv
+```
+
+Karena notebook berada di dalam folder `notebooks`, lokasi relatif dataset yang digunakan adalah:
+
+```python
+../data/Obesity_prediction.csv
+```
+
+Jika terjadi kesalahan saat membaca dataset, periksa kembali nama file dan struktur folder repository.
+
+### H. Menyimpan Hasil
+
+Setelah seluruh cell berhasil dijalankan:
+
+1. Pastikan tidak terdapat error.
+2. Periksa hasil analisis, visualisasi, dan evaluasi model.
+3. Simpan notebook menggunakan `Ctrl + S`.
+4. Pastikan seluruh output notebook tersimpan.
+
+## 6. Teknologi dan Library yang Digunakan
+
+Proyek ini menggunakan beberapa teknologi dan library berikut:
+
+| Teknologi / Library | Kegunaan |
+|---|---|
+| Python | Bahasa pemrograman utama |
+| Pandas | Pengolahan dan analisis data |
+| NumPy | Operasi numerik |
+| Matplotlib | Visualisasi data |
+| Seaborn | Visualisasi statistik |
+| Scikit-learn | Preprocessing, pemodelan, dan evaluasi Machine Learning |
+| Jupyter Notebook | Menjalankan dan mendokumentasikan proses analisis |
+| Visual Studio Code | Lingkungan pengembangan proyek |
+| Git & GitHub | Pengelolaan versi dan penyimpanan repository |
+
+## 7. Metodologi Proyek
+
+Proses pengerjaan proyek mengikuti tahapan Data Science sebagai berikut:
+
+1. **Business Understanding**  
+   Menentukan tujuan dan permasalahan yang ingin diselesaikan melalui analisis data obesitas.
+
+2. **Data Understanding**  
+   Memahami karakteristik dataset, jumlah data, tipe variabel, distribusi kelas, dan kondisi data.
+
+3. **Data Preparation**  
+   Melakukan pemeriksaan data, penanganan data duplikat, serta preprocessing sesuai kebutuhan pemodelan.
+
+4. **Exploratory Data Analysis (EDA)**  
+   Melakukan eksplorasi dan visualisasi untuk mengetahui pola kebiasaan hidup dan karakteristik individu pada setiap kategori obesitas.
+
+5. **Modeling**  
+   Membangun model Machine Learning untuk melakukan klasifikasi kategori status obesitas.
+
+6. **Evaluation**  
+   Mengevaluasi performa model menggunakan metrik seperti Accuracy, Precision, Recall, F1-Score, dan Confusion Matrix.
+
+7. **Conclusion**  
+   Menyimpulkan hasil analisis dan evaluasi model berdasarkan proses yang telah dilakukan.
+
+## 8. Catatan dan Batasan Proyek
+
+- Dataset yang digunakan tidak secara khusus merepresentasikan seluruh populasi Indonesia.
+- Hasil klasifikasi dipengaruhi oleh karakteristik dan distribusi data yang digunakan.
+- Tinggi badan dan berat badan dapat digunakan dalam eksplorasi data, tetapi perlu dikeluarkan dari fitur pemodelan apabila kategori target dibentuk berdasarkan BMI, untuk menghindari target leakage.
+- Model yang dihasilkan hanya digunakan untuk kebutuhan pembelajaran dan analisis data, bukan sebagai pengganti pemeriksaan atau diagnosis tenaga kesehatan.
 
 ---
 
 **Program Studi Informatika**  
-**Jurusan Informatika, Fakultas Teknik Industri**  
-**Universitas Pembangunan Nasional “Veteran” Yogyakarta**  
+**Jurusan Informatika**  
+**Fakultas Teknik Industri**  
+**Universitas Pembangunan Nasional "Veteran" Yogyakarta**  
 **2026**
