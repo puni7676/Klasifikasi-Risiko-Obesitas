@@ -4,8 +4,6 @@ Analisis Pola Kebiasaan Hidup dan Karakteristik Individu pada Berbagai Kategori 
 # Proyek Akhir Praktikum Data Science — Informatika UPN “Veteran” Yogyakarta
 Notebook ini mengikuti alur CRISP-DM: **Business Understanding → Data Gathering/Data Understanding → EDA → Cleaning & Preprocessing → Modelling → Evaluation → Conclusion**
 
-# FORMAT KETERANGAN
-
 1. **Nomor Kelompok:** 55
 2. **Nama Kelompok:** kaum deadline
 3. **Nama Seluruh Anggota Kelompok:**
