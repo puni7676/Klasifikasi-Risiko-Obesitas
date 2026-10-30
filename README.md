@@ -31,7 +31,7 @@ Proyek ini bersifat akademik. Hasil klasifikasi **bukan alat diagnosis medis**, 
 Dataset yang digunakan adalah **Estimation of Obesity Levels Based on Eating Habits and Physical Condition**.
 
 - **Tautan dataset yang dicantumkan dalam laporan kelompok:** Kaggle – Obesity Prediction  
-  https://www.kaggle.com/datasets/ruchikakumbhar/obesityprediction
+  https://www.kaggle.com/datasets/ruchikakumbhar/obesity-prediction
 - **File lokal:** `data/Obesity_prediction.csv`
 - **Ukuran dataset:** 2.111 baris dan 17 kolom (16 fitur dan 1 target), sesuai dokumentasi dataset/laporan kelompok.
 - **Target klasifikasi:** `Obesity`, yang berisi tujuh kategori status berat badan.
