@@ -1,4 +1,4 @@
-# Obesity Prediction: Analisis Pola Kebiasaan Hidup dan Karakteristik Individu pada Berbagai Kategori Status Obesitas
+# Obesity Prediction: Klasifikasi Tingkat Risiko Obesitas Berdasarkan Kebiasaan Makan dan Aktivitas Fisik
 
 ## 1. Ringkasan Proyek
 
