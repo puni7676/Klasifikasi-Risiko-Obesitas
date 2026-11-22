@@ -98,10 +98,8 @@ ObesityPrediction/
 Keterangan:
 
 - `README.md`: Dokumentasi dan panduan proyek.
-- `requirements.txt`: Daftar library Python yang dibutuhkan.
 - `data/`: Folder penyimpanan dataset.
 - `notebooks/`: Folder notebook yang berisi proses analisis dan pemodelan.
-- `laporan/`: Folder dokumen laporan proyek.
 
 ## 5. Panduan Menjalankan Proyek
 
