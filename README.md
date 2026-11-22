@@ -172,12 +172,13 @@ Extension tersebut digunakan untuk menjalankan notebook Python secara langsung d
 
 ### F. Membuka dan Menjalankan Notebook
 
-1. Buka folder `notebooks`.
-2. Pilih file `UTS_DataScience_ObesityPrediction_ProyekAkhir.ipynb`.
-3. Klik **Select Kernel** pada bagian kanan atas notebook.
-4. Pilih interpreter Python dari virtual environment `.venv`.
-5. Jalankan setiap cell secara berurutan atau pilih **Run All**.
-6. Tunggu hingga seluruh proses analisis dan pemodelan selesai.
+1. *Clone* atau unduh repository yang sudah berisi `Obesity_prediction.csv`, lalu tempatkan notebook pada folder `notebooks/`.
+2. Instal Python serta Jupyter/VS Code Python dan Jupyter extension.
+3. Jalankan perintah `python -m pip install -r requirements.txt` di root repository.
+4. Buka notebook dan pilih **Run All**.
+5. Tunggu hingga seluruh proses analisis dan pemodelan selesai.
+6. Pastikan tabel, grafik, model, dan kesimpulan muncul dari CSV asli; simpan notebook **beserta hasil eksekusi** sebelum pengumpulan.
+7. Jika CSV tidak ditemukan, notebook mencoba pembacaan dari GitHub (memerlukan internet). Notebook menolak berkas yang ukurannya bukan 2.111 × 17.
 
 ### G. Memastikan Dataset Terbaca
 
@@ -222,35 +223,47 @@ Proyek ini menggunakan beberapa teknologi dan library berikut:
 
 ## 7. Metodologi Proyek
 
-Proses pengerjaan proyek mengikuti tahapan Data Science sebagai berikut:
+Proyek ini menggunakan pendekatan *Machine Learning* dengan metode klasifikasi multikelas untuk mengidentifikasi kategori tingkat obesitas berdasarkan karakteristik individu dan kebiasaan hidup. Proses pengerjaan mengikuti tahapan Data Science sebagai berikut:
 
-1. **Business Understanding**  
-   Menentukan tujuan dan permasalahan yang ingin diselesaikan melalui analisis data obesitas.
+1. **Business Understanding**
 
-2. **Data Understanding**  
-   Memahami karakteristik dataset, jumlah data, tipe variabel, distribusi kelas, dan kondisi data.
+   Mengidentifikasi permasalahan klasifikasi tingkat obesitas, menentukan tujuan analisis, merumuskan pertanyaan penelitian, serta menetapkan metode dan metrik evaluasi yang digunakan.
 
-3. **Data Preparation**  
-   Melakukan pemeriksaan data, penanganan data duplikat, serta preprocessing sesuai kebutuhan pemodelan.
+2. **Data Gathering**
 
-4. **Exploratory Data Analysis (EDA)**  
-   Melakukan eksplorasi dan visualisasi untuk mengetahui pola kebiasaan hidup dan karakteristik individu pada setiap kategori obesitas.
+   Mengumpulkan dan memahami dataset obesitas yang bersumber dari UCI Machine Learning Repository, meliputi jumlah data, karakteristik variabel, deskripsi setiap fitur, serta informasi mengenai sumber dan kualitas dataset.
 
-5. **Modeling**  
-   Membangun model Machine Learning untuk melakukan klasifikasi kategori status obesitas.
+3. **Exploratory Data Analysis (EDA)**
 
-6. **Evaluation**  
-   Mengevaluasi performa model menggunakan metrik seperti Accuracy, Precision, Recall, F1-Score, dan Confusion Matrix.
+   Melakukan analisis statistik deskriptif dan visualisasi data untuk mengetahui distribusi kategori obesitas, karakteristik individu, serta pola hubungan antara kebiasaan hidup dan tingkat obesitas. Setiap visualisasi disertai interpretasi berdasarkan hasil analisis.
 
-7. **Conclusion**  
-   Menyimpulkan hasil analisis dan evaluasi model berdasarkan proses yang telah dilakukan.
+4. **Cleaning dan Preprocessing**
 
-## 8. Catatan dan Batasan Proyek
+   Memeriksa missing value, data duplikat, outlier, dan ketidaksesuaian tipe data. Selanjutnya dilakukan penanganan data sesuai kebutuhan, termasuk transformasi variabel kategorikal dan standardisasi fitur numerik. Tahapan ini juga mencakup Feature Selection untuk menentukan fitur yang relevan berdasarkan tujuan analisis.
 
-- Dataset yang digunakan tidak secara khusus merepresentasikan seluruh populasi Indonesia.
-- Hasil klasifikasi dipengaruhi oleh karakteristik dan distribusi data yang digunakan.
-- Tinggi badan dan berat badan dapat digunakan dalam eksplorasi data, tetapi perlu dikeluarkan dari fitur pemodelan apabila kategori target dibentuk berdasarkan BMI, untuk menghindari target leakage.
-- Model yang dihasilkan hanya digunakan untuk kebutuhan pembelajaran dan analisis data, bukan sebagai pengganti pemeriksaan atau diagnosis tenaga kesehatan.
+5. **Modelling**
+
+   Membangun model klasifikasi menggunakan Logistic Regression dan Random Forest, serta Dummy Classifier sebagai baseline pembanding. Proses pemodelan menggunakan pembagian data latih dan data uji serta validasi silang untuk membantu menilai kemampuan generalisasi model.
+
+6. **Evaluasi**
+
+   Mengevaluasi performa model menggunakan Accuracy, Precision, Recall, F1-score, dan Confusion Matrix. Hasil evaluasi digunakan untuk membandingkan kemampuan model dalam mengklasifikasikan tujuh kategori obesitas serta menentukan model terbaik berdasarkan metrik dan tujuan analisis.
+
+7. **Konklusi**
+
+   Menyimpulkan hasil analisis berdasarkan pertanyaan pada tahap Business Understanding, menjelaskan makna hasil evaluasi, menentukan model yang paling sesuai, serta mengidentifikasi keterbatasan dataset dan metode penelitian.
+
+## 8. Hasil yang Diharapkan
+
+Hasil yang diharapkan dari proyek ini adalah diperolehnya pemahaman mengenai karakteristik individu dan kebiasaan hidup yang berkaitan dengan kategori tingkat obesitas.
+
+Melalui proses Exploratory Data Analysis (EDA), proyek ini diharapkan dapat memberikan gambaran mengenai distribusi kategori obesitas dan pola yang terdapat pada dataset.
+
+Selanjutnya, proyek ini diharapkan menghasilkan model Machine Learning yang mampu melakukan klasifikasi tingkat obesitas berdasarkan fitur yang tersedia. Perbandingan beberapa model dilakukan untuk mengetahui perbedaan performa dan menentukan model yang paling sesuai berdasarkan hasil evaluasi.
+
+Selain itu, proyek ini diharapkan dapat memberikan penjelasan mengenai kontribusi fitur terhadap proses klasifikasi, kesalahan prediksi yang terjadi, dan keterbatasan model.
+
+Hasil akhir proyek disajikan dalam Jupyter Notebook yang memuat seluruh tahapan analisis, kode program, visualisasi, hasil evaluasi, interpretasi, serta kesimpulan yang dapat dipertanggungjawabkan secara akademis.
 
 ---
 
