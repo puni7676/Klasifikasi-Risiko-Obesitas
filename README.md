@@ -17,9 +17,7 @@ Klasifikasi dilakukan ke dalam tujuh kategori, yaitu:
 6. Obesity Type II
 7. Obesity Type III
 
-Tahapan proyek meliputi Business Understanding, Data Understanding, Data Preparation, Exploratory Data Analysis (EDA), Modeling, Evaluation, dan Conclusion.
-
-Hasil proyek diharapkan dapat memberikan gambaran mengenai pola kebiasaan makan dan aktivitas fisik pada berbagai kategori status obesitas serta menunjukkan kemampuan Machine Learning dalam melakukan klasifikasi berdasarkan variabel yang tersedia.
+Proyek klasifikasi **7 kategori status berat badan/obesitas** dengan pendekatan data science. Notebook memuat Business Understanding, Data Gathering, EDA, Cleaning, Preprocessing, Feature Selection, Modelling, Evaluasi, dan Konklusi. Proyek ini **bukan alat diagnosis medis**; tidak diperlukan aplikasi web atau deployment.
 
 **Catatan:** Hasil klasifikasi merupakan analisis berbasis dataset dan bukan diagnosis atau penilaian risiko medis secara langsung.
 
